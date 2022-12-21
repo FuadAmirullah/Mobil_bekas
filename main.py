@@ -12,8 +12,8 @@ st.title('Prediksi Mobil Bekas Rusak Eropa')
 col1, col2 = st.columns(2)
 
 with col1 :
-    mileage = st.text_input('masukan Jarak tempuh(skala : 10000 - 100000)')
-    year = st.text_input('Masukan Tahun?(skala : 2015 - 2019)')
+    mileage = st.text_input('Masukan Tahun?(skala : 2015 - 2019)')
+    year = st.text_input('masukan Jarak tempuh(skala : 10000 - 100000)')
     tax = st.text_input('masukan harga pajak (skala : 0 - 200)')
 with col2 :
     price = st.text_input('masukan harga (skala : 10000-30000)')    
@@ -25,7 +25,7 @@ ket_harga = ''
 # membuat Tombol Untuk Prediksi
 if st.button('Test'):
     ket_prediction = mobil_model.predict([[year, mileage, tax, price, mpg, engineSize]])
-    if(ket_prediction[0]==1):
+    if(ket_prediction[0]==0):
         ket_harga = 'Mobil Rusak/Lecet'
     else : 
         ket_harga = 'Mobil Mulus'
