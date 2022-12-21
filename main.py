@@ -26,9 +26,9 @@ ket_harga = ''
 if st.button('Test'):
     ket_prediction = mobil_model.predict([[year, mileage, tax, price, mpg, engineSize]])
     if(ket_prediction[0]==0):
-        ket_harga = 'Mobil Rusak/Lecet'
-    else : 
         ket_harga = 'Mobil Mulus'
+    else : 
+        ket_harga = 'Mobil Rusak/Lecet'
 
     st.success(ket_harga)
 
