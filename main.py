@@ -13,7 +13,7 @@ col1, col2 = st.columns(2)
 
 with col1 :
     mileage = st.text_input('Masukan Tahun?(skala : 2015 - 2019)')
-    year = st.text_input('masukan Jarak tempuh(skala : 10000 - 100000)')
+    year = st.text_input('masukan Jarak tempuh(skala : 1000 - 80000)')
     tax = st.text_input('masukan harga pajak (skala : 0 - 200)')
 with col2 :
     price = st.text_input('masukan harga (skala : 10000-30000)')    
