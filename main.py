@@ -25,10 +25,10 @@ ket_harga = ''
 # membuat Tombol Untuk Prediksi
 if st.button('Test'):
     ket_prediction = mobil_model.predict([[year, mileage, tax, price, mpg, engineSize]])
-    if(ket_prediction[0]==1 & ket_prediction[mileage]>15000):
-        ket_harga = 'Mobil Lecet/Rusak'
+    if(ket_prediction[0]==0):
+        ket_harga = 'Mobil Mulus'
     else : 
-        ket_harga = 'Mobil masih mulus'
+        ket_harga = 'Mobil Rusak/Lecet'
 
     st.success(ket_harga)
 
